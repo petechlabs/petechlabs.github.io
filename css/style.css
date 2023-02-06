@@ -1,0 +1,23 @@
+.navbar {
+  background-color: plum;
+}
+
+.send-btn {
+  background-color: plum;
+  border: none;
+  color: purple;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition-duration: 0.6s;
+}
+
+.send-btn:hover{
+  background-color: purple;
+  color: white;
+}
