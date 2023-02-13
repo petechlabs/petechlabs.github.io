@@ -8,6 +8,11 @@
   padding-bottom: 100px;
 }
 
+img {
+  max-width:100%;
+  max-height:100%;
+}
+
 .text-yellow {
   color: var(--dark-yellow);
 }
@@ -75,19 +80,29 @@
   color: var(--light-purple);
 }
 
-.what-petech {
-  background-color: red;
-}
-
 #what-text {
   margin: 100px 100px;
   width: 25%;
-  background-color: blueviolet;
   float: left;
+  padding-top: 80px;
 }
 
 #what-img {
-  background-color: aqua;
-  width: 25%;
+  width: 50%;
   float: left;
+}
+
+#how-petech {
+  clear: left;
+  text-align: center;
+}
+
+.img-cel {
+  float: left;
+  width: 32%;
+  padding: 10px;
+}
+
+.text-how {
+  font-size: 14px;
 }
