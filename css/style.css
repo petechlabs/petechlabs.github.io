@@ -1,5 +1,17 @@
-.navbar {
-  background-color: plum;
+:root {
+  --dark-purple: #530D70;
+  --medium-purple: #88569B;
+  --light-purple: #BA9EC6;
+  --dark-red: #D60024;
+  --medium-red: #E34D68;
+  --light-red: #EF98A8;
+  --dark-yellow: #FFAE31;
+  --medium-yellow: #FFC770;
+  --light-yellow: #FFDFAE;
+}
+
+body {
+  font-family: 'Poppins';
 }
 
 .send-btn {

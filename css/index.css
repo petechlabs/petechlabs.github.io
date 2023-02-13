@@ -1,0 +1,93 @@
+#body {
+  font-family: 'Poppins';
+}
+
+#gradient {
+  background-color: var(--medium-purple);
+  background-image: linear-gradient(to top right, var(--dark-purple), var(--medium-red), var(--dark-yellow));
+  padding-bottom: 100px;
+}
+
+.text-yellow {
+  color: var(--dark-yellow);
+}
+
+.text-purple {
+  color: var(--dark-purple);
+}
+
+.text-grey {
+  color: #757575;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+}
+
+#sign-up {
+  background-color: white;
+  color: var(--dark-purple);
+  padding: 15px 20px;
+  margin-left: 400px;
+  text-decoration: none;
+  border-radius: 31px;
+}
+
+#sign-up:hover {
+  background-color: var(--dark-purple);
+  color: white;
+}
+
+.div-content {
+  margin-top: 100px;
+}
+
+.div-text {
+  margin-top: 100px;
+  width: 30%;
+  color: white;
+}
+
+.btn-content {
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 31px;
+}
+
+#btn-content-1 {
+  background-color: white;
+  color: var(--dark-purple);
+}
+
+#btn-content-1:hover {
+  background-color: var(--dark-purple);
+  color: white;
+}
+
+#btn-content-2 {
+  border: 1.5px solid white;
+  color: white;
+  margin-left: 10px;
+}
+
+#btn-content-2:hover {
+  border: 1.5px solid var(--dark-purple);
+  color: var(--light-purple);
+}
+
+.what-petech {
+  background-color: red;
+}
+
+#what-text {
+  margin: 100px 100px;
+  width: 25%;
+  background-color: blueviolet;
+  float: left;
+}
+
+#what-img {
+  background-color: aqua;
+  width: 25%;
+  float: left;
+}
