@@ -7,8 +7,8 @@
 #gradient {
   background-color: var(--medium-purple);
   background-image: url("/imgs/foto.website-petech.png");
+  background-size: cover;
   background-position: center;
-  background-size: 1300px;
   background-repeat: no-repeat;
   padding-bottom: 100px;
 }

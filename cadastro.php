@@ -1,3 +1,43 @@
+<?php
+session_start();
+
+ini_set('default_charset', 'UTF-8');
+
+include("conectarDatabase.php");
+
+$nome = $email = "";
+$erroNome = $erroEmail = "";
+$idTutor = mt_rand(1, 1000);
+
+function limparDados($dados) {
+  // organiza os dados recebidos
+  $dados = trim($dados); // tira espaços em branco
+  $dados = stripslashes($dados); // tira aspas
+  $dados = htmlspecialchars($dados); // substitui caracteres especiais
+
+  return $dados;
+}
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+  $nome = limparDados($_POST["nome"]);
+  $email = limparDados($_POST["email"]);
+
+  $query = "INSERT INTO tutores(idTutor, nome, email)
+  VALUES ('$idTutor', '$nome', '$email')";
+
+  //mysqli_query($conexao, $query);
+
+  if (mysqli_query($conexao, $query)) {
+    echo "Dados inseridos com sucesso no banco de dados!";
+  } else {
+    echo "Erro ao inserir os dados: " . mysqli_error($conexao);
+  }
+  
+  mysqli_close($conexao);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -47,18 +87,22 @@
     <p>para utilizar a Petech, é simples e gratuito, apenas passe
       as informações abaixo, e, quando preciso, lhe passamos elas de volta
     </p>
-    <form action="https://api.sheetmonkey.io/form/9WgQLfb2ot4FXft4SQi8S4" method="post">
+
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       <h4>suas informações</h4>
       <div class="row">
         <div class="mb-3 col">
           <label class="form-label">seu nome</label>
-          <input class="form-control" type="text" placeholder="Ana Carla" name="nome-dono">
+          <input class="form-control" type="text" placeholder="Ana Carla" name="nome" value="<?php echo $nome;?>">
         </div>
         <div class="mb-3 col">
           <label class="form-label">seu email</label>
-          <input class="form-control" type="email" placeholder="anacarla@exemplo.com" name="email-dono">
+          <input class="form-control" type="email" placeholder="anacarla@exemplo.com" name="email" value="<?php echo $email;?>">
         </div>
+        <input type="submit">
       </div>
+    </form>
+
       <h4>sobre seu pet</h4>
       <div class="row">
         <div class="col">
